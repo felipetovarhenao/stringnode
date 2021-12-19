@@ -1,20 +1,20 @@
-# **[stringnode] transcriber**
+# **`[stringnode]`**
 
 ## CAC tool for string harmonic pattern transcription
 
-[ stringnode transcriber ] // Felipe Tovar-Henao © 2021-22
+`[stringnode]` // Felipe Tovar-Henao © 2021-22
 
-[ stringnode transcriber ] is a piece-specific patch that transcribes
+`[stringnode]` is a piece-specific patch that transcribes
 sequences of harmonic-touch fingering patterns from a .bell file containing
 the instructions for each pattern. Each pattern is created from a list
 specifying its different features (# of strings, # of bowings, etc.), where
 the format is the following:
 
-[ [<list_of_voice_ids>] [<list_of_starting_fret_position>] <number_of_string_changes> <number_of_bowings> <hop_size> <number_of_repetitions> <gap_after_pattern> [<list_of_string_offsets>] ]
+`[ [<list_of_voice_ids>] [<list_of_starting_fret_position>] <number_of_string_changes> <number_of_bowings> <hop_size> <number_of_repetitions> <gap_after_pattern> [<list_of_string_offsets>] ]`
 
 For instance:
 
-[ [1 3] [5 4] 3 2 1 4 0 [] ]
+`[ [1 3] [5 4] 3 2 1 4 0 [] ]`
 
 This produces a pattern where:
 
