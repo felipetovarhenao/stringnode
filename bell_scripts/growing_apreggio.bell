@@ -1,4 +1,6 @@
+##  [stringnode script]
 ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
+
 [ `tempo 170 ]
 [ `stream 0
     [[2]        [3 ]        []              1/16    1       1       0       4       0 ] 
