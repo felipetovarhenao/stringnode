@@ -1,28 +1,68 @@
-# **`[stringnode]`**
+# **`[stringnode] sequencer+sampler`**
 
-## CAC tool for string harmonic pattern transcription
+### _CAC tool for string node pattern sequencing and playback_
 
-`[stringnode]` // Felipe Tovar-Henao © 2021-22
+### Felipe Tovar-Henao © 2021-22
 
-`[stringnode]` is a piece-specific patch that transcribes
-sequences of harmonic-touch fingering patterns from a .bell file containing
-the instructions for each pattern. Each pattern is created from a list
+\
+`[stringnode]` is a piece-specific tool that transcribes
+sequences of harmonic-touch fingering patterns from a `.bell` file containing
+the instructions for each pattern.
+\
+Each pattern is created from a list
 specifying its different features (# of strings, # of bowings, etc.), where
 the format is the following:
 
-`[ [<list_of_voice_ids>] [<list_of_starting_fret_position>] <number_of_string_changes> <number_of_bowings> <hop_size> <number_of_repetitions> <gap_after_pattern> [<list_of_string_offsets>] ]`
+Pattern format:
 
-For instance:
+```lisp
+[<instr_ids>] [<fret_positions>] [<string_offset>] <beat_unit> <num_strings> <num_bows> <hop_size> <num_reps> <gap_size>
+```
 
-`[ [1 3] [5 4] 3 2 1 4 0 [] ]`
+Each pattern can be concatenated in the form of streams:
+\
 
-This produces a pattern where:
+```lisp
+`stream <onset>
+    [<pattern_1>]
+    [<pattern_2>]
+    ...
+    [<pattern_N>]
+```
 
-- voices 1 and 3 are playing
-- voice 1's position is 5 and voice 2's position is 4
-- the pattern changes string 3 times
-- for each string there are 2 bowings
-- there is a 1 beat hop between adjacent voices
-- the pattern repeats 4 times
-- there are no gaps after the pattern
-- there are no string offsets for each voice (i.e. the pattern starts in string 4).
+Several streams can be created and may have different tempi:
+
+```lisp
+[`tempo <BPM>]
+[ `stream <onset>
+    [<pattern_1>]
+    [<pattern_2>]
+    ...
+    [<pattern_N>]]
+...
+[`tempo <BPM>]
+[ `stream <onset>
+    [<pattern_1>]
+    [<pattern_2>]
+    ...
+    [<pattern_N>]]
+]
+```
+
+Additionally, quantization information can be included when needed:
+
+```python
+[ `quantization
+    [<tempo>
+        [<time_sig_num> <time_sig_den> <num_bars>]
+        ...
+        [<time_sig_num> <time_sig_den> <num_bars>]
+    ]
+    ...
+    [<tempo>
+        [<time_sig_num> <time_sig_den> <num_bars>]
+        ...
+        [<time_sig_num> <time_sig_den> <num_bars>]
+    ]
+]
+```
