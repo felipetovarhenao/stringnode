@@ -5,24 +5,44 @@
 ### Felipe Tovar-Henao © 2021-22
 
 \
-`[stringnode]` is a piece-specific tool that transcribes
-sequences of harmonic-touch fingering patterns from a `.bell` file containing
-the instructions for each pattern.
+`[stringnode]` is a piece-specific pair of MaxMSP patch + M4L device for sequencing and playback of harmonic-touch fingering patterns, which are built using `.bell` scripts containing the instructions for each pattern.
 \
-Each pattern is created from a list
-specifying its different features (# of strings, # of bowings, etc.), where
-the format is the following:
+The structure of a `.bell` script is hierarchical, and can include 3 different types of information — pattern streams, tempo changes, and quantization information. The general structure of a script using all three types of elements would look something like this:
 
-Pattern format:
-
-```lisp
-[<instr_ids>] [<fret_positions>] [<string_offset>] <beat_unit> <num_strings> <num_bows> <hop_size> <num_reps> <gap_size>
+```python
+[ `tempo <BPM> ]
+[ `stream <stream_onset_1>
+    [<pattern_1>]
+    [<pattern_2>]
+]
+[ `stream <stream_onset_2>
+    [<pattern_1>]
+    [<pattern_2>]
+]
+[ `quantization
+    [<quantization>]
+]
 ```
 
-Each pattern can be concatenated in the form of streams:
-\
+The format for each element in the example is explained below:
 
-```lisp
+- `<pattern>` format:
+
+```python
+[<instr_ids>]
+[<fret_positions>]
+[<string_offset>]
+<beat_unit>
+<num_strings>
+<num_bows>
+<hop_size>
+<num_reps>
+<gap_size>
+```
+
+- Patterns are contained within `<streams>`:
+
+```python
 `stream <onset>
     [<pattern_1>]
     [<pattern_2>]
@@ -30,17 +50,19 @@ Each pattern can be concatenated in the form of streams:
     [<pattern_N>]
 ```
 
-Several streams can be created and may have different tempi:
+- Several `<streams>` can be created and may have different `<tempo>` assignments:
 
-```lisp
-[`tempo <BPM>]
+```python
+[ `tempo <BPM>]
 [ `stream <onset>
     [<pattern_1>]
     [<pattern_2>]
     ...
     [<pattern_N>]]
+
 ...
-[`tempo <BPM>]
+
+[ `tempo <BPM>]
 [ `stream <onset>
     [<pattern_1>]
     [<pattern_2>]
@@ -49,7 +71,7 @@ Several streams can be created and may have different tempi:
 ]
 ```
 
-Additionally, quantization information can be included when needed:
+- Additionally, `<quantization>` information can be included when necessary:
 
 ```python
 [ `quantization
