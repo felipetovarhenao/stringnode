@@ -25,7 +25,7 @@ The `[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package
 
 ### the `.bell` scripts
 
-The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all three types of blocks would look something like this:
+The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all 4 types of blocks would look something like this:
 
 ```python
 [ `tempo <BPM> ]

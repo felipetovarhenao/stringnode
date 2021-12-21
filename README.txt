@@ -13,7 +13,7 @@ NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer.
 The [stringnode] sequencer reads the .bell scripts, using the MaxMSP package bach. The scripts must be included in the bell_scripts folder, and can be read using the sequencer's menu. To play specific pattern use the marker menu.
 
 the .bell scripts
-The structure of a .bell script is hierarchical, and can include 4 different blocks of information — pattern sequences, tempo changes, fret structures, and quantization information. The general structure of a script using all three types of blocks would look something like this:
+The structure of a .bell script is hierarchical, and can include 4 different blocks of information — pattern sequences, tempo changes, fret structures, and quantization information. The general structure of a script using all 4 types of blocks would look something like this:
 
 [ `tempo <BPM> ]
 [ `frets <fret_list> ]
