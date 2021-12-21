@@ -2,7 +2,7 @@
 
 ### _CAC tool for string node pattern sequencing and playback_
 
-### Felipe Tovar-Henao © 2021-22
+### © 2021-22 Felipe Tovar-Henao
 
 \
 `[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of a work for string quartet. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for each pattern sequence.
@@ -118,4 +118,4 @@ _NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5
 
 ---
 
-`[stringnode]` was developed using the version 0.8.1.4 beta (build 20210617112246) of the `bach` package.
+`[stringnode]` was developed using version 0.8.1.4 beta (build 20210617112246) of `bach`.

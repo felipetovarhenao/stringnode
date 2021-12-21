@@ -1,6 +1,6 @@
 [stringnode] sequencer + sampler
 CAC tool for string node pattern sequencing and playback
-Felipe Tovar-Henao © 2021-22
+© 2021-22 Felipe Tovar-Henao
 
 [stringnode] is a computer-aided composition (CAC) tool, specifically developed for the writing of a work for string quartet. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through .bell scripts containing the instructions for each pattern sequence.
 
