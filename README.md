@@ -115,3 +115,7 @@ _NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5
     ]
 ]
 ```
+
+---
+
+`[stringnode]` was developed using the version 0.8.1.4 beta (build 20210617112246) of the `bach` package.
