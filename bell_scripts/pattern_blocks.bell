@@ -1,17 +1,60 @@
-##  [stringnode script: PATTERN BLOCKS]
+$tempo = 170 ;
+destroy = (
+    $s, $m -> ( $seq = $s; 
+    $out = [$s] (for $i in 1...(length($s)-1) collect ($seq = subs($seq, flat(minmax($seq):((4 2 4 2):$m)), null); 
+    [$seq]) ); 
+    if $m > 2 then rev($out @maxdepth 1) else $out ) 
+);
+$primes = primeser(2, 17);
+$primes = group($primes, 2);
+$primes = flat(trans($primes));
+$primes = flat(destroy($primes, 1));
+primes = rev($primes);
+$stpos = (1 2 1 2);
+$endpos = (4 2 4 2);
+$gaps = rev(0...(length($primes)-1));
+$dx = 2 -1;
+$i = 1;
+$gaps = rev(0 1 (for $x in 1...(length($primes)-2) collect $i = $i + $dx:((($x-1)%2)+1)));
+$gaps = round($gaps**1.333);
+$voicelist = for $x $i in 1...length($primes) collect 
+    (
+        $len = fold($x-1+2, 2)+1; 
+        [sort((((0...$len) + $i + 1)%4) + 1)]
+    );
 
-[   `tempo 170 ]
-[   `frets 0 1 2 3 4 5 6 7 8 9 10 11 12]
-
-[   `seq 0/16
-    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
-    [   [1 2 3 4]   [1 1 1 1]   [2 1 0 0]       1/16    1       1       0       17       0 ] 
-    [   [1 2 3 4]   [1 1 1 1]   [2 1 0 0]       1/16    1       1       0       17       0 ] 
+[   `frets 0 2 4 5 7 9 10 12 ]
+[   `tempo $tempo ]
+[   `seq 0
+    (
+        for $p $i in $primes, $g in $gaps, $v in $voicelist collect (
+            $voices = $v;
+            $index = ($i-1)/(length($primes)-1);
+            $allposns = int(round(($stpos*(1-$index))+($endpos*($index))));
+            $posns = [(for $y in flat($voices) collect $allposns:($y))];
+            $stroff = [ (fold($i-1, 3) :* 4) + rev(0...3) ];
+            $unit = 1/16;
+            $numstrings = $p;
+            $bows = fold($i-1, 3)+1;
+            $hop = 0;
+            $reps = 1;
+            $gap = $g/16; 
+            [ $voices $posns $stroff $unit $numstrings $bows $hop $reps $gap ]
+        )
+    )
 ]
 
-##  quantization info
 [   `quantization
-    [ 120
+    [ $tempo 
         [4 4 1]
     ]
 ]
+
+#(
+        (for $x in 0...4 collect 
+        ($unit = fold($x, 2)+1;
+        $j = fold(floor($x/2), 5)+1;
+        [ [1...4] [3 2 3 2] [rev(0...3)] $unit/16 1 1 0 4 0])
+    )
+        [[1...4] [2 1 2 1] [3 2 1 0] 1/8 1 1 0 1 0]
+)#
