@@ -5,7 +5,7 @@
 ### © 2021-22 Felipe Tovar-Henao
 
 \
-`[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of a work for string quartet. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for each pattern sequence.
+`[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of «Reflejos de pólvora» (2022): Attractors for amplified string quartet. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for each pattern sequence.
 
 ---
 
@@ -113,6 +113,20 @@ _NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5
         ...
         [<time_sig_num> <time_sig_den> <num_bars>]
     ]
+]
+```
+
+- Furthermore, any `bell`-compatible synthax can be used to algorithmically generate sequences and/or patterns — e.g. for/while loops, native and user-defined functions, variable assignment, etc. For instance:
+
+```python
+[ `tempo 150]
+[ `frets 0 1 3 4 6 7 9 10 12]
+[ `seq 0
+    ($bows = 1...6;
+    for $b $i in $bows collect
+        ($unit = ($i%3)+1;
+        [[1...3] [3 :* 3] [rev(0...2)] $unit/16 2 $b 0 1 0])
+    )
 ]
 ```
 

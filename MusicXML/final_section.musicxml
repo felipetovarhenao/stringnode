@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN"
+"http://www.musicxml.org/dtds/partwise.dtd" >
+<score-partwise version="3.0">
+	<identification>
+		<encoding>
+			<software>bach for Max v0.8.1.4 beta</software>
+			<encoding-date>2021-12-25</encoding-date>
+		</encoding>
+	</identification>
+	<defaults>
+		<word-font font-family="Times New Roman" font-size="11" />
+	</defaults>
+	<part-list>
+		<score-part id="P1">
+			<part-name>Vln. I</part-name>
+			<score-instrument id="P1-I1">
+				<instrument-name>Grand Piano</instrument-name>
+			</score-instrument>
+		</score-part>
+		<score-part id="P2">
+			<part-name>Vln. II</part-name>
+			<score-instrument id="P2-I2">
+				<instrument-name>Grand Piano</instrument-name>
+			</score-instrument>
+		</score-part>
+		<score-part id="P3">
+			<part-name>Vla.</part-name>
+			<score-instrument id="P3-I3">
+				<instrument-name>Grand Piano</instrument-name>
+			</score-instrument>
+		</score-part>
+		<score-part id="P4">
+			<part-name>Vcl.</part-name>
+			<score-instrument id="P4-I4">
+				<instrument-name>Grand Piano</instrument-name>
+			</score-instrument>
+		</score-part>
+	</part-list>
+	<part id="P1" />
+	<part id="P2" />
+	<part id="P3" />
+	<part id="P4" />
+</score-partwise>
