@@ -56,8 +56,8 @@ The formats for each element in the previous example are explained below:
   5. The number of strings (`<num_strings>`) used in the pattern.
   6. The number of bowings (`<num_bows>`) per string.
   7. The amount of beat rests around the center of the pattern (`<hop_size>`), which elongates the pattern.
-  8. The amount of repetitions for the pattern
-  9. The amount of beats after all repetitions of the pattern.
+  8. The amount of repetitions (`<reps>`) for the pattern.
+  9. The tempo-relative beat unit for the rest or `<gap>` separating the current `<pattern>` from the next.
 
 A `<pattern>` must then be formatted as follows:
 
