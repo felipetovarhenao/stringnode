@@ -1,17 +1,17 @@
 # **`[stringnode]` sequencer + sampler**
 
-### _CAC tool for string node pattern sequencing and playback_
+### _Computer-assisted composition tool for string node pattern sequencing and playback_
 
 ### © 2021-22 Felipe Tovar-Henao
 
 \
-`[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
+`[stringnode]` is a computer-assisted composition tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
 
 ---
 
 ### `[stringnode]` sampler
 
-The `[stringnode]` sampler it's a simple M4L device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
+The `[stringnode]` sampler it's a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
@@ -31,11 +31,13 @@ For convenience, the sequencer also diplays two streams of information about eac
 
 - The periodicity, with its 1st derivative, for each pattern.
 
+For some examples, see the `bell_scripts` folder.
+
 ---
 
 ### `.bell` scripts
 
-The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all 4 types of blocks would look something like this:
+The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information at the main level — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all 4 types of main-level blocks would look something like this:
 
 ```python
 [ `tempo <BPM> ]
@@ -53,21 +55,22 @@ The structure of a `.bell` script is hierarchical, and can include 4 different b
 ]
 ```
 
+Notice that each main-level element starts with a keyword, prepended with a backtick (`` ` ``)
 The formats for each element in the previous example are explained below:
 
 - **`<frets>` format**: `<frets>` are specified as a list of integers, and determine the available fingerings for the patterns in all 4 instruments. For instance `` `frets 0 2 4 5 7 9 11 12`` would result in a major scale within _each_ string. The maximum fret value supported for playback is 12. `<frets>` should be specified at least once, and before any `<seq>` in the script.
 
 - **`<pattern>` format**: a `<pattern>` is built from 9 parameters, in the following order:
 
-  1. A list of `<instr_ids>`, specifying which instruments are playing the pattern. The indices range from 1 to 4, corresponding to violin I, violin II, viola, and cello, respectively.
-  2. A list of `<fret_positions>`, specifying the position at which each instrument is going to play. The number of positions must match the number of `<instr_ids>`.
-  3. A list of `<string_offsets>`, specifying the offset for the initial string in the pattern. By default, all patterns start on string IV.
-  4. The tempo-relative `<beat_unit>` for all values in the pattern — e.g. 1/16, 1/8, 1/4, etc.
-  5. The number of strings (`<num_strings>`) used in the pattern.
-  6. The number of bowings (`<num_bows>`) per string.
-  7. The amount of beat rests around the center of the pattern (`<hop_size>`), when using more than 1 voice.
-  8. The amount of repetitions (`<reps>`) for the pattern.
-  9. The tempo-relative beat unit for the rest (`<gap>`) separating the current `<pattern>` from the next.
+  - A list of `<instr_ids>`, specifying which instruments are playing the pattern. The indices range from 1 to 4, corresponding to violin I, violin II, viola, and cello, respectively.
+  - A list of `<fret_positions>`, specifying the position at which each instrument is going to play. The number of positions must match the number of `<instr_ids>`.
+  - A list of `<string_offsets>`, specifying the offset for the initial string in the pattern. By default, all patterns start on string IV.
+  - The tempo-relative `<beat_unit>` for all values in the pattern — e.g. 1/16, 1/8, 1/4, etc.
+  - The number of strings (`<num_strings>`) used in the pattern.
+  - The number of bowings (`<num_bows>`) per string.
+  - The amount of beat rests around the center of the pattern (`<hop_size>`), when using more than 1 voice.
+  - The amount of repetitions (`<reps>`) for the pattern.
+  - The tempo-relative beat unit for the rest (`<gap>`) separating the current `<pattern>` from the next.
 
 A `<pattern>` must then be formatted as follows:
 
