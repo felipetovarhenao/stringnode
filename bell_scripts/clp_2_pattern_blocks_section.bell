@@ -1,3 +1,5 @@
+##  [stringnode script: pattern blocks section]
+
 $tempo = 170 ;
 destroy = (
     $s, $m -> ( $seq = $s; 

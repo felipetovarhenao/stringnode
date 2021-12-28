@@ -1,3 +1,5 @@
+##  [stringnode script: example 02: bell syntax]
+
 [ `tempo 150]
 [ `frets 0 1 3 4 6 7 9 10 12]
 [ `seq 0

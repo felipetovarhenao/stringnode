@@ -1,4 +1,4 @@
-##  [stringnode script: template]
+##  [stringnode script: example 01: canon]
 
 $tempo = 160;
 [   `tempo $tempo ]

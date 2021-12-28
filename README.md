@@ -11,6 +11,9 @@
 
 ### `[stringnode]` sampler
 
+<br>
+<div style="text-align:center"><img src="images/sampler.png" width="200"/></div>
+<br>
 The `[stringnode]` sampler it's a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
@@ -19,6 +22,9 @@ _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
 ### `[stringnode]` sequencer
 
+<br>
+<div style="text-align:center"><img src="images/sequencer.png" width="500"/></div>
+<br>
 The `[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
 
 For convenience, the sequencer also diplays two streams of information about each sequence:
@@ -37,6 +43,9 @@ For some examples, see the `bell_scripts` folder.
 
 ### `.bell` scripts
 
+<br>
+<div style="text-align:center"><img src="images/script.png" width="400"/></div>
+<br>
 The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information at the main level — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all 4 types of main-level blocks would look something like this:
 
 ```python
@@ -129,9 +138,11 @@ _NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5
 ]
 ```
 
-- Furthermore, any `bell`-compatible synthax can be used to algorithmically generate sequences and/or patterns — e.g. for/while loops, native and user-defined functions, variable assignment, etc. For instance:
+- Furthermore, any `bell`-compatible synthax can be used to algorithmically generate sequences and/or patterns — e.g. for/while loops, native and user-defined functions, variable assignment, comments, etc. For instance:
 
 ```python
+## [stringnode] bell script example
+
 [ `tempo 150]
 [ `frets 0 1 3 4 6 7 9 10 12]
 [ `seq 0
