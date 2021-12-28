@@ -5,13 +5,13 @@
 ### © 2021-22 Felipe Tovar-Henao
 
 \
-`[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of _«Reflejos de pólvora» Attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for each pattern sequence.
+`[stringnode]` is a computer-aided composition (CAC) tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
 
 ---
 
 ### `[stringnode]` sampler
 
-The `[stringnode]` sampler it's an easy-to-use M4L device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and choose a different string instrument for each of them.
+The `[stringnode]` sampler it's a simple M4L device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
@@ -19,11 +19,21 @@ _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
 ### `[stringnode]` sequencer
 
-The `[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. The scripts must be included in the `bell_scripts` folder, and can be read using the sequencer's menu. To play specific pattern use the marker menu.
+The `[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
+
+For convenience, the sequencer also diplays two streams of information about each sequence:
+
+- The parametric features of each pattern (see **`<pattern>` format** section below), as a list:
+
+```python
+<num_voices> <beat_unit> <num_strings> <num_bows> <hop_size> <reps> <gap>
+```
+
+- The periodicity, with its 1st derivative, for each pattern.
 
 ---
 
-### the `.bell` scripts
+### `.bell` scripts
 
 The structure of a `.bell` script is hierarchical, and can include 4 different blocks of information — pattern _sequences_, _tempo_ changes, _fret_ structures, and _quantization_ information. The general structure of a script using all 4 types of blocks would look something like this:
 
@@ -49,7 +59,7 @@ The formats for each element in the previous example are explained below:
 
 - **`<pattern>` format**: a `<pattern>` is built from 9 parameters, in the following order:
 
-  1. A list of `<instr_ids>`, specifying which instruments are playing the pattern. The indices range from 1 to 4, corresponding to violin I, violing II, viola and cello, respectively.
+  1. A list of `<instr_ids>`, specifying which instruments are playing the pattern. The indices range from 1 to 4, corresponding to violin I, violin II, viola, and cello, respectively.
   2. A list of `<fret_positions>`, specifying the position at which each instrument is going to play. The number of positions must match the number of `<instr_ids>`.
   3. A list of `<string_offsets>`, specifying the offset for the initial string in the pattern. By default, all patterns start on string IV.
   4. The tempo-relative `<beat_unit>` for all values in the pattern — e.g. 1/16, 1/8, 1/4, etc.

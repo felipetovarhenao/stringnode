@@ -1,0 +1,32 @@
+##  [stringnode script: climax section]
+$tempo = 170;
+$offsets = 2 1 1 0;
+$posns = 4 2 3 1;
+$maxstrings = 6;
+$bowrange = 4 2;
+$bounces = rev(-4...8);
+[   `tempo $tempo ]
+[   `frets 0 2 4 5 7 9 10 12]
+
+for $v in 1...4 collect (
+    for $o in 0...1 collect (
+        [   `seq 0/16
+            (for $s $i in rev(1...$maxstrings) collect (
+                $index = remap($i, 1, $maxstrings, $bowrange:1, $bowrange:2);
+                $bows = int(round($index));
+                [   [$v]    [$posns:$v]                     [$offsets:$v + $o]  1/16            $s      $bows   0       5-$bows                                     0   ] 
+            ))
+                [   [$v]    [3*min(1, (5-$v-1))]            [$offsets:$v + $o]  6/4             1       1       0       int(round((($i-1)/(length($bounces)-1))+1)) 0   ]
+            for $r $i in $bounces collect (
+                [   [$v]    [(5-(1-$o))*min(1, (5-$v-1))]   [$offsets:$v + $o]  max($r,1)/16    1       1       0       int(round((($i-1)/(length($bounces)-1))+1)) 0   ]
+            )
+        ]
+    )
+)
+
+##  quantization info
+[   `quantization
+    [ $tempo
+        [4 4 1]
+    ]
+]
