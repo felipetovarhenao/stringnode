@@ -13,7 +13,7 @@
 
 <div style="text-align:center"><img src="images/sampler.png" width="200"/></div>
 
-`[stringnode]` sampler it's a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
+`[stringnode]` sampler is a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
