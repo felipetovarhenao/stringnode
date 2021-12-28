@@ -13,7 +13,7 @@
 
 <div style="text-align:center"><img src="images/sampler.png" width="200"/></div>
 
-The `[stringnode]` sampler it's a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
+`[stringnode]` sampler it's a simple _MaxForLive_ device that communicates with the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
@@ -23,7 +23,7 @@ _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
 <div style="text-align:center"><img src="images/sequencer.png" width="500"/></div>
 
-The `[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
+`[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
 
 For convenience, the sequencer also diplays two streams of information about each sequence:
 
