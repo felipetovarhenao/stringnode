@@ -121,13 +121,13 @@ _NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5
 
 ```python
 [ `quantization
-    [<tempo>
+    [<BPM>
         [<time_sig_num> <time_sig_den> <num_bars>]
         ...
         [<time_sig_num> <time_sig_den> <num_bars>]
     ]
     ...
-    [<tempo>
+    [<BPM>
         [<time_sig_num> <time_sig_den> <num_bars>]
         ...
         [<time_sig_num> <time_sig_den> <num_bars>]
