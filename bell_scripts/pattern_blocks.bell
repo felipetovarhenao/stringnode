@@ -49,12 +49,3 @@ $voicelist = for $x $i in 1...length($primes) collect
         [4 4 1]
     ]
 ]
-
-#(
-        (for $x in 0...4 collect 
-        ($unit = fold($x, 2)+1;
-        $j = fold(floor($x/2), 5)+1;
-        [ [1...4] [3 2 3 2] [rev(0...3)] $unit/16 1 1 0 4 0])
-    )
-        [[1...4] [2 1 2 1] [3 2 1 0] 1/8 1 1 0 1 0]
-)#

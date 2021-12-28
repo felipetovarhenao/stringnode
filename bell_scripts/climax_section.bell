@@ -1,18 +1,30 @@
-## CLIMAX SECTION
-$posns = [1 1 1 1];
-$stroffs = [rev(0...3)];
+##  [stringnode script: climax section]
+$tempo = 170;
+$offsets = 2 1 1 0;
+$posns = 4 2 3 1;
+$maxstrings = 6;
+$bowrange = 4 2;
+[   `tempo $tempo ]
+[   `frets 0 2 4 5 7 9 10 12]
 
-[   `tempo 170 ]
-[   `frets 0 2 3 1 6 7 5]
-[   `seq 0
-    ([[1] [4] [0] 1/16 1 2 0 15 3/16]):*3
-]
-[   `seq 0/16
-    ([[2] [2] [1] 1/16 2 3 0 5 3/16]):*3
-]
-[   `seq 0/16
-    ([[3] [4] [2] 1/16 3 5 0 2 3/16]):*3
-]
-[   `seq 0/16
-    ([[4] [2] [3] 1/16 5 1 0 6 3/16]):*3
+for $v in 1...4 collect (
+    for $o in 0...1 collect (
+        [   `seq 0/16
+            (for $s $i in rev(1...$maxstrings) collect (
+                $index = remap($i, 1, $maxstrings, $bowrange:1, $bowrange:2);
+                $bows = int(round($index));
+                [   [$v]        [$posns:$v] [$offsets:$v + $o]  1/16    $s      $bows   0       5-$bows     0   ] 
+            ))
+            for $r in rev(-3...5) collect (
+                [   [$v]        [7-(1-$o)]         [$offsets:$v + $o]  max($r,1)/16     1       1       0     2           0   ]
+            )
+        ]
+    )
+)
+
+##  quantization info
+[   `quantization
+    [ $tempo
+        [4 4 1]
+    ]
 ]

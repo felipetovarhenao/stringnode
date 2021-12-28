@@ -1,23 +1,15 @@
-##  [stringnode script: template]
+##  [stringnode script: phasing]
 
 [   `frets 0 2 4 5 7 9 11 12 ]
 
-    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
-[   `tempo 149.5 ]
-[   `seq 0/16
-    [[1]            [4]         []              1/16    3       2       0       164     0 ]
-]
-[   `tempo 149 ]
-[   `seq 0
-    [[2]            [3]         []              1/16    3       2       0       164     0 ]
-]
-[   `tempo 148.5 ]
-[   `seq 0
-    [[3]            [3]         [1]             1/16    3       2       0       164     0 ]
-]
+for $x in 1...4 collect 
+(
+    [ `tempo 148 + ($x%2) ]
+    [ `seq 0
+        [[$x] [3] [ceil($x/2)] 1/16 3 2 0 120 0]
+    ]
+)
 
-
-##  quantization info
 [   `quantization
     [ 170
         [6 8 1]
