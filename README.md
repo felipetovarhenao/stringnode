@@ -23,19 +23,19 @@ _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
 <div style="text-align:center"><img src="images/sequencer.png" width="500"/></div>
 
-`[stringnode]` sequencer reads the `.bell` scripts, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
+`[stringnode]` sequencer transcribes pattern sequences from a given `.bell` script, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
 
 For convenience, the sequencer also diplays two streams of information about each sequence:
 
 - The parametric features of each pattern (see **`<pattern>` format** section below), as a list:
 
 ```python
-<num_voices> <beat_unit> <num_strings> <num_bows> <hop_size> <reps> <gap>
+<voices> <beat_unit> <num_strings> <num_bows> <hop_size> <reps> <gap>
 ```
 
 - The periodicity, with its 1st derivative, for each pattern.
 
-For some examples, see the `bell_scripts` folder.
+For some examples, take a look at the `bell_scripts` folder.
 
 ---
 
@@ -57,85 +57,78 @@ The structure of a `.bell` script is hierarchical, and can include 4 different b
     [<pattern_2>]
 ]
 [ `quantization
-    [<quantization>]
+    [<quantization_info>]
 ]
 ```
 
 Notice that each main-level element starts with a keyword, prepended with a backtick (`` ` ``)
 The formats for each element in the previous example are explained below:
 
-- **`<frets>` format**: `<frets>` are specified as a list of integers, and determine the available fingerings for the patterns in all 4 instruments. For instance `` `frets 0 2 4 5 7 9 11 12`` would result in a major scale within _each_ string. The maximum fret value supported for playback is 12. `<frets>` should be specified at least once, and before any `<seq>` in the script.
+- **`<tempo>` format** (_optional_): `<tempo>` is specified as a quarter note BPM value. More than one `<tempo>` can be included in the same script to change the tempo of individual `<seq>` elements. If not specified, the default is `120`. For instance:
 
-- **`<pattern>` format**: a `<pattern>` is built from 9 parameters, in the following order:
+```python
+[ `tempo 130]
+```
+
+- **`<frets>` format** (_optional_): `<frets>` are specified as a list of integers, which determines the available fingerings in semitones for the patterns in all 4 instruments. For instance `` `frets 0 2 3 5 7 8 10 12`` would result in a minor scale _within each string_. The maximum fret value supported for playback with `[stringnode]` sampler is `12`. More than one `<frets>` element can be included in the same script to change the fretting of individual `<seq>` elements. If not specified, the default fretting is `(0 2 4 5 7 9 11 12)`. For instance:
+
+```python
+[ `frets 0 2 3 5 6 8 9 11 12]
+```
+
+- **`<seq>` format**: a `<seq>` is a list containing a consecutive series of one or more `<pattern>` elements, preceded by the onset for the entire `<seq>`. More than one `<seq>` can be included in the same script. For instance:
+
+```python
+[ `seq 0
+    [[3]    [2]     [0]     1/16    4   2   0   2   0 ]
+    [[3]    [2]     [0]     1/16    3   3   0   2   0 ]
+]
+[ `seq 1/4
+    [[1]    [2]     [0]     1/16    3   3   0   2   0 ]
+    [[1]    [2]     [0]     1/16    4   2   0   2   0 ]
+]
+```
+
+_NOTE: the sequence `<onset>` is specified as a tempo-relative unit — e.g. 3/4, 5/8, etc._
+
+- **`<pattern>` format**: each `<pattern>` is built from 9 parameters, in the following order:
 
   - A list of `<instr_ids>`, specifying which instruments are playing the pattern. The indices range from 1 to 4, corresponding to violin I, violin II, viola, and cello, respectively.
-  - A list of `<fret_positions>`, specifying the position at which each instrument is going to play. The number of positions must match the number of `<instr_ids>`.
-  - A list of `<string_offsets>`, specifying the offset for the initial string in the pattern. By default, all patterns start on string IV.
+  - A list of `<fret_positions>`, specifying the starting position for the pattern, for each voice/instrument. The number of positions must match the number of `<instr_ids>`.
+  - A list of `<string_offsets>`, specifying the offset for the initial string in the pattern, for each voice/instrument. The number of string offsets must match the number of `<instr_ids>`. By default, all patterns start on string 4.
   - The tempo-relative `<beat_unit>` for all values in the pattern — e.g. 1/16, 1/8, 1/4, etc.
   - The number of strings (`<num_strings>`) used in the pattern.
   - The number of bowings (`<num_bows>`) per string.
   - The amount of beat rests around the center of the pattern (`<hop_size>`), when using more than 1 voice.
   - The amount of repetitions (`<reps>`) for the pattern.
   - The tempo-relative beat unit for the rest (`<gap>`) separating the current `<pattern>` from the next.
+    <br></br>
 
-A `<pattern>` must then be formatted as follows:
-
-```python
-[<instr_ids>] [<fret_positions>] [<string_offsets>] <beat_unit> <num_strings> <num_bows> <hop_size> <num_reps> <gap_size>
-```
-
-- Every `<pattern`> is contained within a `<seq>`, as follows:
+  For instance:
 
 ```python
-`seq <onset>
-    [<pattern_1>]
-    [<pattern_2>]
-    ...
-    [<pattern_N>]
+##  instr_id    posns   str_offset  beat    numstr  bows    hopsize reps    gap
+    [[3]        [2]     [0]         1/16    4       2       0       2       0 ]
 ```
 
-_NOTE: the sequence <onset> is specified as tempo-relative units — e.g. 3/4, 5/8, etc._
-
-- More than one `<seq>` can be included in the same script, and may have different `<tempo>` assignments:
-
-```python
-[ `tempo <BPM>]
-[ `seq <onset>
-    [<pattern_1>]
-    [<pattern_2>]
-    ...
-    [<pattern_N>]]
-
-...
-
-[ `tempo <BPM>]
-[ `seq <onset>
-    [<pattern_1>]
-    [<pattern_2>]
-    ...
-    [<pattern_N>]]
-]
-```
-
-- Optionally, `<quantization>` information can be included when necessary:
+- **`<quantization>` format** (_optional_): `<quantization`> is a list specifying _tempo_, _time signature(s)_, and _number of bars_ for each time signature, when a specific metric configuration is needed. For instance:
 
 ```python
 [ `quantization
-    [<BPM>
-        [<time_sig_num> <time_sig_den> <num_bars>]
-        ...
-        [<time_sig_num> <time_sig_den> <num_bars>]
+    ## tempo
+    [120
+    ##  time_sig    num_bars
+        [4 4        1]
+        [6 8        2]
     ]
-    ...
-    [<BPM>
-        [<time_sig_num> <time_sig_den> <num_bars>]
-        ...
-        [<time_sig_num> <time_sig_den> <num_bars>]
+    [160
+        [3 4        3]
+        [9 16       4]
     ]
 ]
 ```
 
-- Furthermore, any `bell`-compatible synthax can be used to algorithmically generate sequences and/or patterns — e.g. for/while loops, native and user-defined functions, variable assignment, comments, etc. For instance:
+Finally, note that any `bell`-compatible synthax can be used to algorithmically generate sequences and/or patterns — e.g. _for/while loops, native and user-defined functions, variable assignment, comments_, etc. For instance:
 
 ```python
 ## [stringnode] bell script example
