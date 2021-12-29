@@ -1,6 +1,7 @@
-##  [stringnode script: example 01: canon]
+##  [stringnode script: canon]
 
 $tempo = 160;
+
 [   `tempo $tempo ]
 [   `frets 0 2 4 5 7 9 11 12]
 

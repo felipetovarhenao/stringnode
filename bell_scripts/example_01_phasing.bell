@@ -1,6 +1,6 @@
-##  [stringnode script: example 00: phasing]
+##  [stringnode script: phasing]
 
-[   `frets 0 2 4 5 7 9 11 12 ]
+[   `frets 0 1 4 5 7 9 11 12 ]
 
 for $x in 1...4 collect 
 (

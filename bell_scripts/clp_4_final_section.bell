@@ -24,13 +24,26 @@ $SEQ = trans($SEQ);
                 0 5 
                 0 6 
                 0 7)]
-[   `quantization 
-    [ $TEMPO 
-        [4 4 1]
-    ]
-]
+
 for $s $i in $SEQ collect (
     $x = flat($s, 1);
     $pats = (for $unit in flat($x) collect [$VOICES:$i $POSNS:$i $STROFF:$i $unit/16 flat($PATS:$i) 0 1 0]);
     [ `seq 0 $pats]
 )
+
+[   `quantization 
+    [ $TEMPO 
+        [4 4 1]
+        [3 4 2]
+        [3 4 1]
+        [2 4 1]
+        [3 4 3]
+        [2 4 1]
+        [3 4 1]
+        [3 4 1]
+        [2 4 1]
+        [2 4 1]
+        [3 4 1]
+        [4 4 1]
+    ]
+]
