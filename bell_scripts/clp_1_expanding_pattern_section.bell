@@ -1,6 +1,6 @@
 ##  [stringnode script: expanding pattern section]
 
-[   `tempo 170 ]
+[   `tempo 168 ]
 [   `frets 0 1 3 4 5 7 8 9 11 12]
 [   `seq 0
     ##  instr_id    posns           str_offset      beat    numstr  bows    hopsize reps    gap

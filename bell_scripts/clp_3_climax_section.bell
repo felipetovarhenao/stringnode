@@ -1,5 +1,5 @@
 ##  [stringnode script: climax section]
-$tempo = 170;
+$tempo = 168 ;
 $offsets = 2 1 1 0;
 $posns = 4 2 3 1;
 $maxstrings = 6;
