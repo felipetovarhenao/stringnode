@@ -102,7 +102,6 @@ _NOTE: the sequence `<onset>` is specified as a tempo-relative unit — e.g. 3/4
   - The amount of beat rests around the center of the pattern (`<hop_size>`), when using more than 1 voice.
   - The amount of repetitions (`<reps>`) for the pattern.
   - The tempo-relative beat unit for the rest (`<gap>`) separating the current `<pattern>` from the next.
-    <br></br>
 
   For instance:
 
