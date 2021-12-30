@@ -1,6 +1,6 @@
 ##  [stringnode script: final section]
 
-$TEMPO = 168 ;
+$TEMPO = 160 ;
 destroy = (
     $s, $m -> ( $seq = $s; 
     $out = [$s] (for $i in 1...(length($s)-1) collect ($seq = subs($seq, flat(minmax($seq):((4 2 4 2):$m)), null); 

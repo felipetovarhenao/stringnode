@@ -1,6 +1,8 @@
 ##  [stringnode script: expanding pattern section]
 
-[   `tempo 168 ]
+$tempo = 160;
+
+[   `tempo $tempo ]
 [   `frets 0 1 3 4 5 7 8 9 11 12]
 [   `seq 0
     ##  instr_id    posns           str_offset      beat    numstr  bows    hopsize reps    gap
@@ -38,7 +40,7 @@ for $x in 0...2 collect (
 )    
          
 [   `quantization
-    [ 170
+    [ $tempo
         [4 4 1]
     ]
 ]

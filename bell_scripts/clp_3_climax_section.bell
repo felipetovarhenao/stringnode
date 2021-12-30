@@ -7,7 +7,7 @@ destroy = (
     if $m > 2 then rev($out @maxdepth 1) else $out ) 
 );
 
-$tempo = 168 ;
+$tempo = 160 ;
 $offsets = 2 1 1 0;
 $posns = 4 2 3 1;
 $maxstrings = 6;
