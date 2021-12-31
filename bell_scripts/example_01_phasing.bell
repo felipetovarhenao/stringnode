@@ -1,0 +1,17 @@
+##  [stringnode script: phasing]
+
+[   `frets 0 1 4 5 7 9 11 12 ]
+
+for $x in 1...4 collect 
+(
+    [ `tempo 148 + ($x%2) ]
+    [ `seq 0
+        [[$x] [3] [ceil($x/2)] 1/16 3 2 0 120 0]
+    ]
+)
+
+[   `quantization
+    [ 148
+        [6 8 1]
+    ]
+]
