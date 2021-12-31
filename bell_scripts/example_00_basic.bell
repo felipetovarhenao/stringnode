@@ -1,6 +1,0 @@
-##  [stringnode script: basic]
-
-[   `seq 0/16
-    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
-    [   [3]         [2]         [0]             1/16    4       2       0       2       0 ] 
-]
