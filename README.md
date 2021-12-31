@@ -93,8 +93,20 @@ The formats for each element in the previous example are explained below:
 ]
 [ `seq 1/4
     [[1]    [2]     [0]     1/16    2   4   0   2   0 ]
-	[ `tempo 130 ]
     [[1]    [2]     [0]     1/16    3   3   0   2   0 ]
+]
+```
+
+or changing tempo within a sequence:
+
+```python
+[ `seq 0
+	[ `tempo 120 ]
+	[[2]    [3]     [0]     1/16    2   2   0   2   0 ]
+	[ `tempo 130 ]
+	[[2]    [3]     [0]     1/16    2   2   0   2   0 ]
+	[ `tempo 140 ]
+	[[2]    [3]     [0]     1/16    2   2   0   2   0 ]
 ]
 ```
 
