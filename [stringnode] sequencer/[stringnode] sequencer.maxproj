@@ -2,7 +2,7 @@
 	"name" : "[stringnode] sequencer",
 	"version" : 1,
 	"creationdate" : 3723744019,
-	"modificationdate" : 3723744040,
+	"modificationdate" : 3723813927,
 	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -68,10 +68,28 @@
 				"kind" : "textfile",
 				"local" : 1
 			}
+,
+			"_filenames.bell" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
 
 		}
 ,
 		"externals" : 		{
+
+		}
+,
+		"other" : 		{
+			"icon.icns" : 			{
+				"kind" : "file",
+				"local" : 1
+			}
+,
+			"icon.ico" : 			{
+				"kind" : "file",
+				"local" : 1
+			}
 
 		}
 
