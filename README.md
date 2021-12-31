@@ -68,19 +68,23 @@ The structure of a `.bell` script is hierarchical, and can include 4 different b
 Notice that each main-level element starts with a keyword, prepended with a backtick (`` ` ``)
 The formats for each element in the previous example are explained below:
 
-- **`<tempo>` format** (_optional_): `<tempo>` is specified as a quarter note BPM value. More than one `<tempo>` can be included in the same script to change the tempo of individual `<seq>` elements. If not specified, the default is `120`. For instance:
+---
+
+### `.bell` script elements and formats
+
+- **`<tempo>` format** (_optional_): `<tempo>` is specified as a quarter note BPM value. More than one `<tempo>` can be included in the same script to change the tempo of individual `<seq>` or `<pattern>` elements. If not specified, the default is `120`. For instance:
 
 ```python
 [ `tempo 130]
 ```
 
-- **`<frets>` format** (_optional_): `<frets>` are specified as a list of integers, which determines the available fingerings in semitones for the patterns in all 4 instruments. For instance `` `frets 0 2 3 5 7 8 10 12`` would result in a minor scale _within each string_. The maximum fret value supported for playback with `[stringnode]` sampler is `12`. More than one `<frets>` element can be included in the same script to change the fretting of individual `<seq>` elements. If not specified, the default fretting is `(0 2 4 5 7 9 11 12)`. For instance:
+- **`<frets>` format** (_optional_): `<frets>` are specified as a list of integers, which determines the available fingerings in semitones for the patterns in all 4 instruments. For instance `` `frets 0 2 3 5 7 8 10 12`` would result in a minor scale _within each and all strings_. The maximum fret value supported for playback with `[stringnode]` sampler is `12`. More than one `<frets>` element can be included in the same script to change the fretting of individual `<seq>` or `<pattern>` elements. If not specified, the default fretting is `(0 2 4 5 7 9 11 12)`. For instance:
 
 ```python
 [ `frets 0 2 3 5 6 8 9 11 12]
 ```
 
-- **`<seq>` format**: a `<seq>` is a list containing a consecutive series of one or more `<pattern>` elements, preceded by the onset for the entire `<seq>`. More than one `<seq>` can be included in the same script. For instance:
+- **`<seq>` format**: a `<seq>` is a list containing a consecutive series of one or more `<pattern>` elements (and optionally `<tempo>` and/or `<fret>` elements), all preceded by the `` `seq `` keyword and the onset for the entire `<seq>`. More than one `<seq>` can be included in the same script. For instance:
 
 ```python
 [ `seq 0
@@ -88,8 +92,9 @@ The formats for each element in the previous example are explained below:
     [[3]    [2]     [0]     1/16    3   3   0   2   0 ]
 ]
 [ `seq 1/4
+    [[1]    [2]     [0]     1/16    2   4   0   2   0 ]
+	[ `tempo 130 ]
     [[1]    [2]     [0]     1/16    3   3   0   2   0 ]
-    [[1]    [2]     [0]     1/16    4   2   0   2   0 ]
 ]
 ```
 
