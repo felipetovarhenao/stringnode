@@ -2,7 +2,7 @@
 	"name" : "[stringnode] sampler",
 	"version" : 1,
 	"creationdate" : 3723769010,
-	"modificationdate" : 3723810561,
+	"modificationdate" : 3723826551,
 	"viewrect" : [ 8.0, 190.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
