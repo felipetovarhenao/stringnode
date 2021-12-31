@@ -64,5 +64,31 @@ resample = ($x, $n ->
                 $b = $x:min(length($x), $ii+1);
                 ($a*(1-$fi))+($b*$fi)))));
 
+format_script = ($script -> 
+	(for $x $i in $script collect 
+		(
+			$x = flat($x, 1);
+			[ `< ]
+			(if $x:1 == `seq then 
+				(
+					[ $x:1 $x:2 ]
+					(for $y $j in flat(slice($x, 2):2, 1) collect 
+						(
+							$y = flat($y, 1);
+							[ `cr ] ([ `tab ] :* 1)
+							[ `< ]
+							[ $y ]
+							[ `> ]
+						)
+					)
+					[ `cr ]
+				)
+				else [ $x ]
+			)
+			[ `> ] [`cr ]
+		)
+	)
+);
+
 ## ———————————— PRINT READY ————————————
 print( `[stringnode] `sequencer `ready )
