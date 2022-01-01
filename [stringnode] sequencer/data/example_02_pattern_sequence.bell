@@ -1,0 +1,11 @@
+##  [stringnode script: pattern sequence]
+
+[   `seq 0/16
+    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
+    [   [3]         [1]         [0]             1/16    2       4       0       1       0 ] 
+	[   [2 3]       [2 1]       [0 0]           1/16    2       4       0       1       0 ] 
+	[   [2 3]       [2 1]       [0 0]           1/16    2       4       1       1       0 ] 
+	[   [1 2 3]     [3 2 1]     [1 0 0]         1/16    2       4       1       1       0 ] 
+	[   [1 2 3 4]   [3 2 1 2]   [1 0 0 1]       1/16    2       4       1       1       0 ] 
+	[   [1 2 3 4]   [3 2 1 2]   [1 0 0 1]       1/16    2       4       0       1       0 ] 
+]

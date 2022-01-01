@@ -1,0 +1,18 @@
+##  [stringnode script: bell syntax]
+
+[   `frets 0 1 4 5 7 9 11 12 ]
+
+for $x in 1...4 collect 
+(
+	$i = (($x-1)%2)+1;
+    [ `tempo ((70+($i*3))*$i) ]
+    [ `seq 0
+        [[$x] [3] [ceil($x/2)] 1/16 3 2 0 60*$i 0]
+    ]
+)
+
+[   `quantization
+    [ 148
+        [6 8 1]
+    ]
+]

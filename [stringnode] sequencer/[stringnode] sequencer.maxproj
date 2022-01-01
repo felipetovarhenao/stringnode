@@ -2,7 +2,7 @@
 	"name" : "[stringnode] sequencer",
 	"version" : 1,
 	"creationdate" : 3723744019,
-	"modificationdate" : 3723813927,
+	"modificationdate" : 3723919208,
 	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -19,6 +19,11 @@
 		}
 ,
 		"data" : 		{
+			"_filenames.bell" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
 			"_stringnode.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
@@ -29,47 +34,52 @@
 				"local" : 1
 			}
 ,
-			"clp_1_expanding_pattern_section.bell" : 			{
+			"example_01_single_pattern.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"clp_2_pattern_blocks_section.bell" : 			{
+			"example_02_pattern_sequence.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"clp_3_climax_section.bell" : 			{
+			"example_03_two_sequences.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"clp_4_final_section.bell" : 			{
+			"example_04_tempo_changes_i.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"example_00_basic.bell" : 			{
+			"example_05_tempo_changes_ii.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"example_01_phasing.bell" : 			{
+			"example_06_fretting_changes.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"example_02_canon.bell" : 			{
+			"example_07_more_fretting_changes.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"example_03_bell_syntax.bell" : 			{
+			"example_08_bell_syntax_i.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
 ,
-			"_filenames.bell" : 			{
+			"example_09_bell_syntax_ii.bell" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
+			"example_10_bell_syntax_iii.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}

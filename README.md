@@ -7,7 +7,7 @@
 <div style="text-align:center"><img src="images/icon.png" width="100"/></div>
 
 \
-`[stringnode]` is a computer-assisted composition tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch and M4L device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
+`[stringnode]` is a computer-assisted composition tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch/app and M4L audio device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
 
 Click <a href="https://youtu.be/AbRYDJeTeQQ" target="_blank" rel="noopener noreferrer">here</a> for an early version preview of `[stringnode]`.
 
@@ -17,7 +17,7 @@ Click <a href="https://youtu.be/AbRYDJeTeQQ" target="_blank" rel="noopener noref
 
 <div style="text-align:center"><img src="images/sampler.png" width="200"/></div>
 
-`[stringnode]` sampler is a simple _MaxForLive_ device that receives playback information from the sequencer via OSC protocol. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
+`[stringnode]` sampler is a simple _MaxForLive_ device that receives playback information from the sequencer via OSC messages. To use the sampler, simply drag it into 4 separate _Ableton Live_ audio tracks, and assign a different string instrument for each of them.
 
 _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
@@ -27,7 +27,8 @@ _NOTE: the OSC port (3000) is hard-coded into both the sampler and sequencer._
 
 <div style="text-align:center"><img src="images/sequencer.png" width="500"/></div>
 
-`[stringnode]` sequencer transcribes pattern sequences from a given `.bell` script, using the MaxMSP package `bach`. To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
+`[stringnode]` sequencer transcribes pattern sequences from a given `.bell` script, using the MaxMSP package `bach`. All string and fingering patterns are arbitrarily set to have a triangular wave shape.
+To load a script, select a folder containing `.bell` files and choose the script using the sequencer's menu. To play a specific pattern use the marker menu.
 
 For convenience, the sequencer also diplays two streams of information about each sequence:
 

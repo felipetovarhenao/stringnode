@@ -1,4 +1,4 @@
-##  [stringnode script: basic]
+##  [stringnode script: single pattern]
 
 [   `seq 0/16
     ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap
