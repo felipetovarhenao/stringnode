@@ -2,7 +2,7 @@
 	"name" : "[stringnode] sequencer",
 	"version" : 1,
 	"creationdate" : 3723744019,
-	"modificationdate" : 3723919208,
+	"modificationdate" : 3723919852,
 	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,

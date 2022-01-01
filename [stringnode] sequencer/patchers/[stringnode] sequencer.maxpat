@@ -2879,7 +2879,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "`_stringnode.bell\n`_template.bell\n`clp_1_expanding_pattern_section.bell\n`clp_2_pattern_blocks_section.bell\n`clp_3_climax_section.bell\n`clp_4_final_section.bell\n`example_00_basic.bell\n`example_01_phasing.bell\n`example_02_canon.bell\n`example_03_bell_syntax.bell ",
+									"code" : "`_stringnode.bell\n`_template.bell\n`example_01_single_pattern.bell\n`example_02_pattern_sequence.bell\n`example_03_two_sequences.bell\n`example_04_tempo_changes_i.bell\n`example_05_tempo_changes_ii.bell\n`example_06_fretting_changes.bell\n`example_07_more_fretting_changes.bell\n`example_08_bell_syntax_i.bell\n`example_09_bell_syntax_ii.bell\n`example_10_bell_syntax_iii.bell ",
 									"color" : [ 0.690196078431373, 0.156862745098039, 0.156862745098039, 1.0 ],
 									"id" : "obj-5",
 									"maxclass" : "newobj",
@@ -9817,7 +9817,7 @@
 					"fontname" : "Ableton Sans Medium",
 					"fontsize" : 11.0,
 					"id" : "obj-50",
-					"items" : [ "clp_1_expanding_pattern_section.bell", ",", "clp_2_pattern_blocks_section.bell", ",", "clp_3_climax_section.bell", ",", "clp_4_final_section.bell", ",", "example_00_basic.bell", ",", "example_01_phasing.bell", ",", "example_02_canon.bell", ",", "example_03_bell_syntax.bell" ],
+					"items" : [ "example_01_single_pattern.bell", ",", "example_02_pattern_sequence.bell", ",", "example_03_two_sequences.bell", ",", "example_04_tempo_changes_i.bell", ",", "example_05_tempo_changes_ii.bell", ",", "example_06_fretting_changes.bell", ",", "example_07_more_fretting_changes.bell", ",", "example_08_bell_syntax_i.bell", ",", "example_09_bell_syntax_ii.bell", ",", "example_10_bell_syntax_iii.bell" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
