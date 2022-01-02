@@ -7,7 +7,7 @@
 <div style="text-align:center"><img src="images/icon.png" width="100"/></div>
 
 \
-`[stringnode]` is a computer-assisted composition tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch/app and M4L audio device, for sequencing and playback of ondulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
+`[stringnode]` is a computer-assisted composition tool, specifically developed for the writing of _«...como la pólvora...» (2022) attractors for amplified string quartet_. It consists of two parts, a MaxMSP patch/app and M4L audio device, for sequencing and playback of undulating, harmonic-touch fingering patterns. The pattern sequencing is done through `.bell` scripts containing the instructions for how to build each pattern sequence.
 
 Click <a href="https://youtu.be/AbRYDJeTeQQ" target="_blank" rel="noopener noreferrer">here</a> for an early version preview of `[stringnode]`.
 
