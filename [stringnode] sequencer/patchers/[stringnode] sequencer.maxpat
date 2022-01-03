@@ -3715,6 +3715,18 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 750.0, 1671.0, 89.0, 22.0 ],
+									"text" : "loadmess clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"code" : "[$x1:(1 4) $x1:(1 8) $x1:(1 9) BARDUR] ",
 									"id" : "obj-64",
 									"maxclass" : "newobj",
@@ -6963,6 +6975,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-154", 0 ],
+									"midpoints" : [ 759.5, 1746.0, 865.5, 1746.0 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-183", 0 ],
 									"midpoints" : [ 521.5, 489.0, 521.5, 489.0 ],
 									"source" : [ "obj-70", 0 ]
@@ -9763,7 +9783,7 @@
 					"fontname" : "Ableton Sans Medium",
 					"fontsize" : 11.0,
 					"id" : "obj-93",
-					"items" : [ "S1.1", ",", "S2.1" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
