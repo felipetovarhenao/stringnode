@@ -1,4 +1,4 @@
-##  [stringnode script: more fretting changes]
+##  [stringnode script: fretting changes II]
 
 [   `seq 0/16
     ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap

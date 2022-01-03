@@ -1,4 +1,4 @@
-##  [stringnode script: more tempo changes]
+##  [stringnode script: tempo changes II]
 
 [   `seq 0/16
     ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap

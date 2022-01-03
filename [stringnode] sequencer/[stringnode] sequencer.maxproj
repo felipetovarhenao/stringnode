@@ -2,7 +2,7 @@
 	"name" : "[stringnode] sequencer",
 	"version" : 1,
 	"creationdate" : 3723744019,
-	"modificationdate" : 3723919852,
+	"modificationdate" : 3724088640,
 	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -59,16 +59,6 @@
 				"local" : 1
 			}
 ,
-			"example_06_fretting_changes.bell" : 			{
-				"kind" : "textfile",
-				"local" : 1
-			}
-,
-			"example_07_more_fretting_changes.bell" : 			{
-				"kind" : "textfile",
-				"local" : 1
-			}
-,
 			"example_08_bell_syntax_i.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
@@ -80,6 +70,16 @@
 			}
 ,
 			"example_10_bell_syntax_iii.bell" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
+			"example_06_fretting_changes_i.bell" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
+			"example_07_fretting_changes_ii.bell" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}

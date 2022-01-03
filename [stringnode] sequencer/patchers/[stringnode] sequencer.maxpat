@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 522.0, 90.0, 797.0, 906.0 ],
+		"rect" : [ 301.0, 91.0, 797.0, 906.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -297,8 +297,8 @@
 						"audiosupport" : 1,
 						"bundleidentifier" : "www.felipe-tovar-henao.com",
 						"cantclosetoplevelpatchers" : 1,
-						"cefsupport" : 1,
-						"copysupport" : 1,
+						"cefsupport" : 0,
+						"copysupport" : 0,
 						"database" : 0,
 						"extensions" : 1,
 						"gensupport" : 0,
@@ -344,11 +344,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 205.0, 97.804411764705947, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1078,11 +1078,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 13.5, 97.804411764705947, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1143,11 +1143,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 465.884607553482056, 477.0, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1183,11 +1183,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 370.269215106964111, 124.804411764705947, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1223,11 +1223,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 15.5, 510.153845191001892, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1263,11 +1263,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 465.884607553482056, 509.979128477853919, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1303,11 +1303,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 675.384607553482056, 30.781321104133895, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1343,11 +1343,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 465.884607553482056, 124.804411764705947, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1383,11 +1383,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 110.25, 97.804411764705947, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1422,11 +1422,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 565.5, 822.307690382003784, 216.0, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1464,11 +1464,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 565.5, 798.461535573005676, 216.0, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -1507,11 +1507,11 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 15.5, 477.0, 93.615392446517944, 21.846154808998108 ],
 					"saved_attribute_attributes" : 					{
-						"lcdbgcolor" : 						{
+						"lcdcolor" : 						{
 							"expression" : ""
 						}
 ,
-						"lcdcolor" : 						{
+						"lcdbgcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -2581,7 +2581,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "$frets = (\n\t[0 2 4 5 7 9 11 12 ]\n\t[0 3 5 6 8 9 11 12 ]\n);\n[ `tempo 130 ]\n[ `seq 0\n\tfor $t $i in ((120 60) :* 4) collect (\n\t\t[ `tempo $t]\n\t\t($f = flat($frets:(($i%2)+1));\n\t\t\t[ `frets $f ]\n\t\t)\n\t\t[[1] [3] [0] 1/16 2 2 0 1 0 ]\n\t)\n]\n[ `quantization \n\t[ 120 \n\t\t[ 4 4 1 ]\n\t\t[ 3 4 1]\n\t]\n ] ",
+									"code" : "##  [stringnode script: fretting changes I]\n\n[ \t`frets 0 2 4 5 7 9 11 12 ]\n[   `seq 0/16\n    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap\n    [   [2 3]      \t[2 4]      \t[1 2]          \t1/16    1      \t5       0       4       0 ]\n]\n[ \t`frets (0 2 4 5 7 9 11 12) + 1 ]\n[   `seq 5/8\n    ##  instr_id    posns       str_offset      beat    numstr  bows    hopsize reps    gap\n    [   [1 4]      \t[2 4]      \t[1 2]          \t1/16    1      \t5       0       2       0 ] \n] ",
 									"id" : "obj-59",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -2879,7 +2879,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "`_stringnode.bell\n`_template.bell\n`example_01_single_pattern.bell\n`example_02_pattern_sequence.bell\n`example_03_two_sequences.bell\n`example_04_tempo_changes_i.bell\n`example_05_tempo_changes_ii.bell\n`example_06_fretting_changes.bell\n`example_07_more_fretting_changes.bell\n`example_08_bell_syntax_i.bell\n`example_09_bell_syntax_ii.bell\n`example_10_bell_syntax_iii.bell ",
+									"code" : "`_stringnode.bell\n`_template.bell\n`example_01_single_pattern.bell\n`example_02_pattern_sequence.bell\n`example_03_two_sequences.bell\n`example_04_tempo_changes_i.bell\n`example_05_tempo_changes_ii.bell\n`example_06_fretting_changes_i.bell\n`example_07_fretting_changes_ii.bell\n`example_08_bell_syntax_i.bell\n`example_09_bell_syntax_ii.bell\n`example_10_bell_syntax_iii.bell ",
 									"color" : [ 0.690196078431373, 0.156862745098039, 0.156862745098039, 1.0 ],
 									"id" : "obj-5",
 									"maxclass" : "newobj",
@@ -8075,10 +8075,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.840894778569918, 73.301386713981628, 73.0, 20.0 ],
+					"patching_rect" : [ 434.840894778569918, 73.301386713981628, 78.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 486.5, 534.0, 73.0, 20.0 ],
-					"text" : "SCORE VIEW",
+					"presentation_rect" : [ 482.5, 534.0, 78.0, 20.0 ],
+					"text" : "SCORE VIEW  ",
 					"textcolor" : [ 0.149019607843137, 0.149019607843137, 0.149019607843137, 1.0 ],
 					"textjustification" : 1
 				}
@@ -8093,10 +8093,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.840894778569918, 51.301386713981628, 64.0, 20.0 ],
+					"patching_rect" : [ 434.840894778569918, 51.301386713981628, 69.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 496.5, 147.804411764705947, 64.0, 20.0 ],
-					"text" : "ROLL VIEW",
+					"presentation_rect" : [ 491.5, 147.804411764705947, 69.0, 20.0 ],
+					"text" : "ROLL VIEW  ",
 					"textcolor" : [ 0.149019607843137, 0.149019607843137, 0.149019607843137, 1.0 ],
 					"textjustification" : 1
 				}
@@ -9763,7 +9763,7 @@
 					"fontname" : "Ableton Sans Medium",
 					"fontsize" : 11.0,
 					"id" : "obj-93",
-					"items" : [ "S1.1", ",", "S1.2", ",", "S1.3", ",", "S1.4", ",", "S1.5", ",", "S1.6", ",", "S1.7", ",", "S1.8" ],
+					"items" : [ "S1.1", ",", "S2.1" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -9817,7 +9817,7 @@
 					"fontname" : "Ableton Sans Medium",
 					"fontsize" : 11.0,
 					"id" : "obj-50",
-					"items" : [ "example_01_single_pattern.bell", ",", "example_02_pattern_sequence.bell", ",", "example_03_two_sequences.bell", ",", "example_04_tempo_changes_i.bell", ",", "example_05_tempo_changes_ii.bell", ",", "example_06_fretting_changes.bell", ",", "example_07_more_fretting_changes.bell", ",", "example_08_bell_syntax_i.bell", ",", "example_09_bell_syntax_ii.bell", ",", "example_10_bell_syntax_iii.bell" ],
+					"items" : [ "example_01_single_pattern.bell", ",", "example_02_pattern_sequence.bell", ",", "example_03_two_sequences.bell", ",", "example_04_tempo_changes_i.bell", ",", "example_05_tempo_changes_ii.bell", ",", "example_06_fretting_changes_i.bell", ",", "example_07_fretting_changes_ii.bell", ",", "example_08_bell_syntax_i.bell", ",", "example_09_bell_syntax_ii.bell", ",", "example_10_bell_syntax_iii.bell" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
