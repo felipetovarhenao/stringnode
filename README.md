@@ -164,7 +164,12 @@ Finally, note that any `bell`-compatible synthax can be used to algorithmically 
     )
 ]
 ```
+---
+### **License**
+
+`[stringnode]` is distributed under the terms of the GNU General Public License version 3 (GPL-v3.0).
 
 ---
-
-`[stringnode]` was developed using version 0.8.1.4 beta (build 20210617112246) of `bach`.
+### **Dependencies**
+`[stringnode]` was developed using the following third-party dependencies:
+- [`bach`](https://www.bachproject.net/) (v0.8.1.4)
